@@ -6,6 +6,44 @@ Point it at a URL. It captures the page as viewport chunks, extracts the compone
 
 Demo video: https://www.tella.tv/video/speed-up-web-design-with-web-style-reference-8g3i
 
+## Motivation
+
+Recent commercial LLM design tools are still limited when users want to **reference the style of an existing website directly from a URL**. In my experience, when given a website URL, these tools often fail to preserve important visual qualities of the reference, such as layout, typography, spacing, color palette, and component structure. Instead, they generate a new website with a noticeably different style.
+
+This makes it difficult for designers and developers who want to:
+- study the design language of an existing site,
+- reuse high-level stylistic patterns,
+- or generate new components that stay visually aligned with a reference website.
+
+This project addresses this gap by analyzing a reference website directly and extracting reusable design components and color palettes to support style-aware generation. The system uses the website itself as input, making it possible to generate results that are much closer to the original visual style.
+
+The examples below illustrate this difference. Compared with a commercial LLM design tool, our system produces outputs that more faithfully reflect the style of the referenced websites.
+
+## Example Comparison
+
+<table>
+  <tr>
+    <th></th>
+    <th>Example 1</th>
+    <th>Example 2</th>
+  </tr>
+  <tr>
+    <td><strong>Referenced website</strong></td>
+    <td><img src="comparison_example/referenced_web_1.png" alt="Referenced website 1" width="100%"></td>
+    <td><img src="comparison_example/referenced_web_2.png" alt="Referenced website 2" width="100%"></td>
+  </tr>
+  <tr>
+    <td><strong>Claude Design</strong></td>
+    <td><img src="comparison_example/claude_design_example1.png" alt="Claude Design example 1" width="100%"></td>
+    <td><img src="comparison_example/claude_design_example2.png" alt="Claude Design example 2" width="100%"></td>
+  </tr>
+  <tr>
+    <td><strong>Our tool</strong></td>
+    <td><img src="comparison_example/tool_generated_example1.png" alt="Our tool example 1" width="100%"></td>
+    <td><img src="comparison_example/tool_generated_example2.png" alt="Our tool example 2" width="100%"></td>
+  </tr>
+</table>
+
 ## Quick start
 
 **You need:** Python 3.11+, Node 20+, an [Anthropic API key](https://console.anthropic.com/), and (optional but recommended) an [Unsplash Access Key](https://unsplash.com/developers). Without an Unsplash key, images fall back to LoremFlickr.
