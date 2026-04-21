@@ -4,6 +4,8 @@
 
 Point it at a URL. It captures the page as viewport chunks, extracts the component library (buttons, heroes, cards, nav…), pulls the brand color palette tiered into Primary / Secondary / Accent, and identifies the typography stack. Then it generates a brand-new site that uses the same visual language — real components, matched Google Fonts, and on-brand Unsplash imagery.
 
+Demo video: https://www.tella.tv/video/speed-up-web-design-with-web-style-reference-8g3i
+
 ## Quick start
 
 **You need:** Python 3.11+, Node 20+, an [Anthropic API key](https://console.anthropic.com/), and (optional but recommended) an [Unsplash Access Key](https://unsplash.com/developers). Without an Unsplash key, images fall back to LoremFlickr.
