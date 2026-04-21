@@ -1,6 +1,8 @@
 # Web Style Reference
 
-**Turn any website into a reusable design system — then generate new sites in the same style.**
+**Turn any website into a reusable design system — then generate new sites in the same style.** 
+
+For example, you might find a flower shop website with a product gallery style you like. This agent system can analyze design attributes such as layout, spacing, typography, and color usage, then generate component code that reflects a similar visual feel for your own website.
 
 Point it at a URL. It captures the page as viewport chunks, extracts the component library (buttons, heroes, cards, nav…), pulls the brand color palette tiered into Primary / Secondary / Accent, and identifies the typography stack. Then it generates a brand-new site that uses the same visual language — real components, matched Google Fonts, and on-brand Unsplash imagery.
 
@@ -67,7 +69,7 @@ Open http://localhost:5173, paste a URL, watch it stream, then click **Generate*
 
 ## How it works
 
-A Claude **Opus** main agent orchestrates five skills in order. The perception work (looking at screenshots, picking image keywords, fixing broken snippets) fans out to Claude **Sonnet** subagents. Everything in between is plain Python — Playwright, PIL, Unsplash's API.
+A Claude **Opus** main agent orchestrates five skills in order. The perception work (looking at screenshots, picking image keywords, fixing broken snippets) fans out to Claude **Sonnet** subagents. Everything in between is Python — Playwright, PIL, Unsplash's API.
 
 ```
 URL → ① download → ② analyze → ③ validate → ④ replace_images → ⑤ generate → HTML
@@ -162,3 +164,5 @@ Builds a design-system brief: the tiered palette with usage rules ("primary for 
 
 Skills never call each other — they exchange typed Pydantic results through the main agent, which is why every stage's output is replayable from disk.
 
+
+This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
