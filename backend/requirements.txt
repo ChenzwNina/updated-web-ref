@@ -1,0 +1,10 @@
+fastapi>=0.115
+uvicorn[standard]>=0.32
+pydantic>=2.9
+sse-starlette>=2.2
+playwright>=1.48
+anthropic>=0.40
+python-dotenv>=1.0
+python-multipart>=0.0.12
+Pillow>=11.0
+eval_type_backport>=0.2.0 ; python_version < "3.10"
