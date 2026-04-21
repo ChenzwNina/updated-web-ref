@@ -1,6 +1,8 @@
 # Web Style Reference
 
-**Turn any website into a reusable design system — then generate new sites in the same style. For example, you might find a flower shop website with a product gallery style you like. This agent system can analyze high-level design attributes such as layout, spacing, typography, and color usage, then generate component code that reflects a similar visual feel for your own website.** 
+**Turn any website into a reusable design system — then generate new sites in the same style. 
+
+For example, you might find a flower shop website with a product gallery style you like. This agent system can analyze high-level design attributes such as layout, spacing, typography, and color usage, then generate component code that reflects a similar visual feel for your own website.** 
 
 Point it at a URL. It captures the page as viewport chunks, extracts the component library (buttons, heroes, cards, nav…), pulls the brand color palette tiered into Primary / Secondary / Accent, and identifies the typography stack. Then it generates a brand-new site that uses the same visual language — real components, matched Google Fonts, and on-brand Unsplash imagery.
 
