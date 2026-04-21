@@ -31,7 +31,7 @@ Open http://localhost:5173, paste a URL, watch it stream, then click **Generate*
 
 ## How it works
 
-A Claude **Opus** main agent orchestrates five skills in order. The perception work (looking at screenshots, picking image keywords, fixing broken snippets) fans out to Claude **Sonnet** subagents. Everything in between is plain Python — Playwright, PIL, Unsplash's API.
+A Claude **Opus** main agent orchestrates five skills in order. The perception work (looking at screenshots, picking image keywords, fixing broken snippets) fans out to Claude **Sonnet** subagents. Everything in between is Python — Playwright, PIL, Unsplash's API.
 
 ```
 URL → ① download → ② analyze → ③ validate → ④ replace_images → ⑤ generate → HTML
